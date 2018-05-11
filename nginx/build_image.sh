@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -xe
 PWD=$(pwd)
 PATH_DOCKERFILE=$PWD/Dockerfile
 IMAGE_TAG="v1"
