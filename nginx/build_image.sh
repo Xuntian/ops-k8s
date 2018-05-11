@@ -13,4 +13,4 @@ fi
 
 REGISTRY_HOST="10.28.18.13"
 docker tag keepwork/stage/nginx:$IMAGE_TAG $REGISTRY_HOST/keepwork/stage/nginx:$IMAGE_TAG
-docker pus $REGISTRY_HOST/keepwork/stage/nginx:$IMAGE_TAG
+docker push $REGISTRY_HOST/keepwork/stage/nginx:$IMAGE_TAG
