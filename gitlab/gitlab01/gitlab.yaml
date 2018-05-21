@@ -28,18 +28,18 @@ spec:
   - port: 80
     targetPort: 80
   selector: 
-    app: nginx
+    app: gitlab01
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: nginx
+  name: gitlab01
 spec: 
   rules: 
-  - host: nginx.test.com
+  - host: gitlab01.test.com
     http: 
       paths:
       - path: /
         backend:
-          serviceName: nginx
+          serviceName: gitlab01
           servicePort: 80
