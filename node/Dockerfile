@@ -1,8 +1,8 @@
-FROM xuntian/node-yarn as pac_builder
+FROM xuntian/node:10.1-npm-5.6-yarn-1.6 as pac_builder
 MAINTAINER xuntian "li.zq@foxmail.com"
 COPY ./ /code/
 WORKDIR /code
-RUN npm install
+# RUN npm install
 RUN npm run build
 
 FROM nginx
