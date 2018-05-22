@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres01
+  labels:
+    app: postgres01
+spec:
+  containers:
+  - name: postgres01
+    image: postgres:9.6
+    ports:
+      - containerPort: 5432
+    volumeMounts: 
+      - name: nfs-postgres01
+        mountPath: "/var/lib/postgresql/data"
+    env: 
+    - name: POSTGRES_PASSWORD
+      value: "123456"
+    - name: POSTGRES_USER
+      value: "gitlab"
+  volumes: 
+    - name: nfs-postgres01
+      nfs: 
+        server: 10.28.18.13
+        path: "/mnt/postgres"
+---
+apiVersion: v1
+kind: Service 
+metadata: 
+  name: postgres01
+spec: 
+  ports:
+  - port: 5432
+    targetPort: 5432
+  selector: 
+    app: postgres01
