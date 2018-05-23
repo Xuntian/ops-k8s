@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node01
+  labels:
+    app: node01
+spec:
+  containers:
+  - name: node01
+    image: 10.28.18.13/node_project:v2
+    ports:
+      - containerPort: 80

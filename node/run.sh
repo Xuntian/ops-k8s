@@ -16,10 +16,13 @@ if [[ ! -e $BUILD_DOCKERFILE_PATH ]]; then
     echo "build.dockerfile文件不存在"
     exit 1
 fi 
-docker build -t xuntian/node_project:v1 ./
+docker build -t xuntian/node_project:v2 ./
 
-docker tag xuntian/node_project:v1 10.28.18.13/node_project:v1
-docker push 10.28.18.13/node_project:v1
+docker tag xuntian/node_project:v1 10.28.18.13/node_project:v2
+docker push 10.28.18.13/node_project:v2
 
-kubectl create -f keepwork.yaml
+kubectl delete pod node01
+
+sleep 5s
+kubectl create -f node01.yaml
 
