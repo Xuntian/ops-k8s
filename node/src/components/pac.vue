@@ -20,7 +20,7 @@
               <img src="@/assets/pac/paracraft_topmenu_logo.png" alt="">
               <div class="paracraft-intro">
                 <p>
-                  <span class="stress">Paracraft 创意空间</span>是一款面向全年龄用户的免费的3D创作软件。</p>
+                  <span class="stress">Paracraft 创意空间12111</span>是一款面向全年龄用户的免费的3D创作软件。</p>
                 <p>你可以用它创建3D场景和人物，制作动画和电影，学习和编写计算机程序。下载软件后，</p>
                 <p>可观看百部优秀的用户电影作品，创造属于你的个人作品。</p>
               </div>
